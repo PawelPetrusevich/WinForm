@@ -28,6 +28,7 @@ namespace Zapravka
             fuel_comboBox.DisplayMember = "Name";
             fuel_comboBox.ValueMember = "Price";
             priceFuel_textBox.DataBindings.Add(new Binding("Text",fuelList,"Price"));
+            
 
             //if (count_radioButton.Checked)
             //{
@@ -65,15 +66,121 @@ namespace Zapravka
 
         private void count_textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (((TextBox)sender).Text.Contains('-'))
+            if ((e.KeyChar >= '0') && (e.KeyChar <= '9'))
             {
-                if (!((Char.IsDigit(e.KeyChar) && ((TextBox)sender).SelectionStart > 0) || e.KeyChar == (char)Keys.Back))
-                    e.Handled = true;
-
+                // цифра
+                return;
             }
 
-            else if (!(Char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || (e.KeyChar == '-' && ((TextBox)sender).SelectionStart == 0)))
-                e.Handled = true;
+
+            if (e.KeyChar == '-')
+            {
+                if (count_textBox.Text.IndexOf('-') != -1)
+                {
+
+                    e.Handled = true;
+                }
+                return;
+            }
+            if (e.KeyChar == '-')
+            {
+                return;
+            }
+
+
+
+            if (e.KeyChar == '.')
+            {
+                // точку заменим запятой
+                e.KeyChar = ',';
+            }
+
+            if (e.KeyChar == ',')
+            {
+                if (count_textBox.Text.IndexOf(',') != -1)
+                {
+                    // запятая уже есть в поле редактирования
+                    e.Handled = true;
+                }
+                return;
+            }
+
+            
+            // остальные символы запрещены
+            e.Handled = true;
+        }
+
+        private void count_textBox_TextChanged(object sender, EventArgs e)
+        {
+            int countFuel = int.Parse( count_textBox.Text);
+            decimal temp = ((decimal)countFuel) * decimal.Parse(priceFuel_textBox.Text);
+            oplata_textBox.Text = temp.ToString();
+        }
+
+        private void summa_textBox_TextChanged(object sender, EventArgs e)
+        {
+
+            if (summa_textBox.Text != null)
+            {
+                decimal summFuel = decimal.Parse(summa_textBox.Text);
+                decimal temp = decimal.Parse(summa_textBox.Text) / decimal.Parse(priceFuel_textBox.Text);
+                oplata_textBox.Text = temp.ToString(); 
+            }
+        }
+
+        private void gamburger_checkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (gamburger_checkBox.Checked)
+            {
+                Gamburger_count_textBox.Enabled = true;
+            }
+            else
+            {
+                Gamburger_count_textBox.Enabled = false;
+                Gamburger_count_textBox.Text = "0";
+            }
+        }
+
+        private void cola_checkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cola_checkBox.Checked)
+            {
+                Cola_count_textBox.Enabled = true;
+
+            }
+            else
+            {
+                Cola_count_textBox.Enabled = false;
+                Cola_count_textBox.Text = "0";
+            }
+        }
+
+        private void hotDog_checkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (hotDog_checkBox.Checked)
+            {
+                hot_count_textBox.Enabled = true;
+            }
+            else
+            {
+                hot_count_textBox.Enabled = false;
+                hot_count_textBox.Text = "0";
+            }
+        }
+
+        private void Cola_count_textBox_TextChanged(object sender, EventArgs e)
+        {
+            decimal temp_gamburger = ((decimal.Parse( Gamburger_count_textBox.Text))*(decimal.Parse(gamburger_price_textBox.Text)));
+            decimal temp_hot = (decimal.Parse(hot_count_textBox.Text)) * (decimal.Parse(hot_price_textBox.Text));
+            decimal temp_cola = (decimal.Parse(Cola_count_textBox.Text)) * (decimal.Parse(cola_price_textBox.Text));
+            decimal temp = temp_cola + temp_gamburger + temp_hot;
+            kafe_oplata_textBox.Text = temp.ToString();
+        }
+
+        private void all_button_Click(object sender, EventArgs e)
+        {
+            decimal temp = (decimal.Parse(kafe_oplata_textBox.Text)) + (decimal.Parse(oplata_textBox.Text));
+            all_textBox.Text = temp.ToString();
         }
 
         
