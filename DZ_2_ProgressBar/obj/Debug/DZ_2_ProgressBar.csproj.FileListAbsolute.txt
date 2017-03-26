@@ -1,0 +1,9 @@
+C:\Users\pst\Desktop\DZ_2_ProgressBar\DZ_2_ProgressBar\bin\Debug\DZ_2_ProgressBar.exe.config
+C:\Users\pst\Desktop\DZ_2_ProgressBar\DZ_2_ProgressBar\bin\Debug\DZ_2_ProgressBar.exe
+C:\Users\pst\Desktop\DZ_2_ProgressBar\DZ_2_ProgressBar\bin\Debug\DZ_2_ProgressBar.pdb
+C:\Users\pst\Desktop\DZ_2_ProgressBar\DZ_2_ProgressBar\obj\Debug\DZ_2_ProgressBar.csprojResolveAssemblyReference.cache
+C:\Users\pst\Desktop\DZ_2_ProgressBar\DZ_2_ProgressBar\obj\Debug\DZ_2_ProgressBar.Form1.resources
+C:\Users\pst\Desktop\DZ_2_ProgressBar\DZ_2_ProgressBar\obj\Debug\DZ_2_ProgressBar.Properties.Resources.resources
+C:\Users\pst\Desktop\DZ_2_ProgressBar\DZ_2_ProgressBar\obj\Debug\DZ_2_ProgressBar.csproj.GenerateResource.Cache
+C:\Users\pst\Desktop\DZ_2_ProgressBar\DZ_2_ProgressBar\obj\Debug\DZ_2_ProgressBar.exe
+C:\Users\pst\Desktop\DZ_2_ProgressBar\DZ_2_ProgressBar\obj\Debug\DZ_2_ProgressBar.pdb
