@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DZ_2_ListBox
 {
     [Serializable]
-    class Person
+    public class Person
     {
 
         string name;
@@ -39,7 +39,11 @@ namespace DZ_2_ListBox
           get { return number; }
           set { number = value; }
         }
-#endregion  
+        #endregion
+        public Person()
+        {
+
+        }
         public Person(string name, string lastName, string faterName, string number)
         {
             Name = name;
