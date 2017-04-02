@@ -1,0 +1,10 @@
+C:\Users\pst\Source\Repos\WinForm\DZ_3_1\DZ_3_1\bin\Debug\DZ_3_1.exe.config
+C:\Users\pst\Source\Repos\WinForm\DZ_3_1\DZ_3_1\bin\Debug\DZ_3_1.exe
+C:\Users\pst\Source\Repos\WinForm\DZ_3_1\DZ_3_1\bin\Debug\DZ_3_1.pdb
+C:\Users\pst\Source\Repos\WinForm\DZ_3_1\DZ_3_1\obj\Debug\DZ_3_1.csprojResolveAssemblyReference.cache
+C:\Users\pst\Source\Repos\WinForm\DZ_3_1\DZ_3_1\obj\Debug\DZ_3_1.Form1.resources
+C:\Users\pst\Source\Repos\WinForm\DZ_3_1\DZ_3_1\obj\Debug\DZ_3_1.Properties.Resources.resources
+C:\Users\pst\Source\Repos\WinForm\DZ_3_1\DZ_3_1\obj\Debug\DZ_3_1.SearchForm.resources
+C:\Users\pst\Source\Repos\WinForm\DZ_3_1\DZ_3_1\obj\Debug\DZ_3_1.csproj.GenerateResource.Cache
+C:\Users\pst\Source\Repos\WinForm\DZ_3_1\DZ_3_1\obj\Debug\DZ_3_1.exe
+C:\Users\pst\Source\Repos\WinForm\DZ_3_1\DZ_3_1\obj\Debug\DZ_3_1.pdb
